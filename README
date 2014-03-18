@@ -1,0 +1,102 @@
+Nume: Ditu
+Prenume: Alexandru Mihai
+Grupa: 323
+Seria: CA
+
+Explicatii Tema 1 PP
+
+	(define ask
+	  (λ (db query)
+		(let ((search (takeSearch query)) (whatToSelect (takeSelect query)))
+		  (let* ((choices (computeAllQuerries search db '(()) ))
+		         (validChoices (validateAllChoices choices)))
+		    (if (areBounded? whatToSelect validChoices)
+		        (select validChoices (car whatToSelect) null)
+		        null;aici nu se ajunge niciodata
+		        )))))
+			
+	Am sa explic cum functioneaza ask (astfel expun si ideea mea de rezolvare).
+	In rest, majoritatea functiilor au (dupa parerea mea) suficiente comentarii.
+	
+	(let ((search (takeSearch query)) (whatToSelect (takeSelect query)))
+		search = o lista de liste; contine toate query-urile
+		whatToSelect = o lista de liste; contine ce trebuie eu sa selectez din
+						solutiile pe care le-am obtinut
+						
+						
+	Apoi:
+		computeAllQuerries (practic aici se intampla totul) ia fiecare querry
+	in parte, si face match pe db, in final intorcand (choices) o lista de liste, 
+	fiecare lista continand perechi de tipul (var valoare).
+		computeAllQuerries funct astfel:
+			am o functie compute1Querry, care primeste ca parametru un singur querry, db,
+			si lista. Aceasta lista (S), contine toate solutiile pana la momentul in care am
+			ajuns la acel querry. Querry (prescurtat qr) poate fi de 2 feluri:
+				ori un pattern
+				ori un if
+			am tratat separat fiecare caz in parte.
+			Aceasta functie stie sa faca match pe db, sa obtina solutii noi (legari de tipul
+			(var val) ), sa adauge la solutiile noi, solutiile vechi, si sa intoarca in final
+			o lista cu noile solutii obtinute conform qr.
+			De asemenea aici am folosit si aruncarea exceptiei astfel:
+				la inceput, ma intreb daca qr este un predicat
+				daca da, verific cu functia areBounded, daca variabiele din predicat sunt legate
+					daca da, totul e ok, intoarce #t, trece mai departe
+					daca nu, arunca o exceptie, oprind tot programul.
+					deoarece eu apalez astfel:
+						(if (areBounded? qr S) ;testez daca e un predicat valid
+							(ifEval qr S null) ;daca da, il aplic ifEval
+								null ;aici nu intra niciodata
+						am scris ca acolo nu se ajunge niciodata, deoarce, in cazul
+						in care areBounded, gaseste o var nelegata, arunca exceptie,
+						deci opreste programul, inainte sa intre pe ramura else.
+						Asa am gandit cand am implementat , nu am mai schimbat sa fie mai elegant.
+						
+					Am vrut sa mentionez ca am tratat acea exceptie.
+		in continuare computeAllQuerries se apeleaza recursiv, pana cand termina de evaluat
+		toate querry-urile
+Nota:
+	Stiu ca nu am scris corect querry (trebuia query), insa din obisnuinta am scris asa peste tot, si nu am
+	mai schimbat numele functiilor.
+	
+	
+	Apoi:
+		(validChoices (validateAllChoices choices)))
+		Este nevoie de acest apel, deoarece functia mea de match, nu verifica daca
+		apar 2 variabile cu acelasi nume, in acelasi query, deci exista posibilitatea
+		sa fac 2 legari a unei variabile, la 2 vlori diferite. Solutia a fost evidenta,
+		am parcurs lista mea de solutii, si vedeam daca apare pe undeva o variabila de 2
+		ori: daca da, verificam valorile, si in functie de rezultat, pastram acea solutie
+		sau nu.
+		
+		validateAllChoices apeleaza validate1Choice, trimitandu-i pe rand fiecare solutie.
+
+	Apoi:
+		(if (areBounded? whatToSelect validChoices)
+
+		Inainte de ultima functie, ma intreb daca in select nu cumva se afla variabile nelegate.
+		Daca nu sunt, trec mai departe, dar daca sunt intorc null; Totusi, pe ramura else nu se ajunge niciodata,
+		deoarece areBounded? arunca o exceptie in cazul in care exista variabile nelegate.
+		Repet, asa am gandit de la inceput, nu am mai schimbat intr-o forma mai eleganta.
+
+	
+	Apoi:
+		(select validChoices (car whatToSelect) null)))))
+		In final, selectez din lista mea de solutii doar partea care ma intereseaza.
+
+
+Mentionez ca am facut o functie, keepUnique, care sterge duplicatele deoarece 
+functia remove-duplicates mie nu mi-a mers.
+	
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

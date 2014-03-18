@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://elf.cs.pub.ro/pp/teme13/scheme-interogare -->
+<html lang="ro" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+    <title>Scheme: Limbaj de interogare [Paradigme de Programare]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2013-04-01T11:56:26+0300">
+<meta name="keywords" content="teme13,scheme-interogare">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/pp/lib/exe/opensearch.php" title="Paradigme de Programare">
+<link rel="start" href="http://elf.cs.pub.ro/pp/">
+<link rel="contents" href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=index" title="Index">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://elf.cs.pub.ro/pp/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://elf.cs.pub.ro/pp/feed.php?mode=list&ns=teme13">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/pp/_export/xhtml/teme13/scheme-interogare">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://elf.cs.pub.ro/pp/_export/raw/teme13/scheme-interogare">
+<link rel="canonical" href="./enunt_files/enunt.html">
+<link rel="stylesheet" type="text/css" href="./enunt_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='teme13';var JSINFO = {"id":"teme13:scheme-interogare","namespace":"teme13"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="./enunt_files/js.php"></script>
+<script type="text/javascript" charset="utf-8" src="./enunt_files/menu.js"></script>
+<script type="text/javascript" charset="utf-8" src="./enunt_files/indexmenu.js"></script>
+<script type="text/javascript" charset="utf-8">/*<![CDATA[*/var indexmenu_ID='teme13/scheme-interogare'
+/*!]]>*/</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/pp/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/pp/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    <style type="text/css"></style></head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="dokuwiki site mode_show showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#dokuwiki__content">sari la conținut</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/pp/home" accesskey="h" title="[H]"><img src="./enunt_files/logo.png" width="64" height="64" alt=""> <span>Paradigme de Programare</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Unelte utilizator</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=login&sectok=64e3440e20511d819090ee92cad9cefb" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Unelte Site</h3>
+            <form action="http://elf.cs.pub.ro/pp/home" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Caută" class="button" title="Caută"><div id="qsearch__out" class="ajax_qsearch JSpopup" style="display: none;"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/pp/teme13/doku.php" method="post" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="teme13:scheme-interogare"><input type="hidden" name="sectok" value="64e3440e20511d819090ee92cad9cefb"><select name="do" class="edit quickselect" title="Unelte"><option value="">Unelte</option><optgroup label="Unelte Pagină"><option value="edit">Arată sursa paginii</option><option value="revisions">Versiuni vechi</option><option value="backlink">Legătură anterioară</option></optgroup><optgroup label="Unelte Site"><option value="recent">Modificări recente</option><option value="media">Administrare media</option><option value="index">Index</option></optgroup><optgroup label="Unelte utilizator"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Modificări recente [R]">Modificări recente</a></li><li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=media" class="action media" rel="nofollow" title="Administrare media">Administrare media</a></li><li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=index" class="action index" accesskey="x" rel="nofollow" title="Index [X]">Index</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                            <div class="youarehere"><span class="bchead">Sunteţi aici: </span><a href="http://elf.cs.pub.ro/pp/home" class="wikilink1" title="home">Paradigme de Programare CA&amp;CC</a> » <a href="http://elf.cs.pub.ro/pp/teme13/home" class="wikilink1" title="teme13:home">Teme</a> » <span class="curid"><a href="./enunt_files/enunt.html" class="wikilink1" title="teme13:scheme-interogare">Scheme: Limbaj de interogare</a></span></div>
+                                </div>
+    
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p>
+<strong>Administrativ</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <span class="curid"><a href="http://elf.cs.pub.ro/pp/home" class="wikilink1" title="home">Home</a></span></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/pp/regulament" class="wikilink1" title="regulament">Regulament</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/pp/limbaje14" class="wikilink1" title="limbaje14">Limbaje</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Cursuri </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> CA</div>
+<ul>
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/pp/_media/cursuri14/mihnea/slides.pdf" class="media mediafile mf_pdf" title="cursuri14:mihnea:slides.pdf">Slides</a> (v4)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/pp/_media/cursuri14/mihnea/handouts.pdf" class="media mediafile mf_pdf" title="cursuri14:mihnea:handouts.pdf">Handouts</a> (v4)</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/pp/_media/cursuri14/mihnea/cod.zip" class="media mediafile mf_zip" title="cursuri14:mihnea:cod.zip">Cod</a> (v4)</div>
+</li>
+<li class="level1"><div class="li"> <a href="https://docs.google.com/forms/d/1KAK4NDaPX_0oz0ihjAZj3r6tsDz45MF1-Ye7Z3A-Ryk/viewform" class="urlextern" title="https://docs.google.com/forms/d/1KAK4NDaPX_0oz0ihjAZj3r6tsDz45MF1-Ye7Z3A-Ryk/viewform" rel="nofollow">Feedback curs</a></div>
+</li>
+</ul>
+</li>
+<li class="level0"><div class="li"> CC</div>
+<ul>
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/pp/cursuri14/andrei/lista-slides" class="wikilink1" title="cursuri14:andrei:lista-slides">Slides curs</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong>Laboratoare</strong>
+</p>
+<ol>
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/pp/laboratoare14/scheme-intro" class="wikilink1" title="laboratoare14:scheme-intro">Racket: Introducere</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/pp/laboratoare14/racket-recursivitate" class="wikilink1" title="laboratoare14:racket-recursivitate">Racket: Recursivitate</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/pp/laboratoare14/racket/functii-de-prim-rang-si-functionale" class="wikilink1" title="laboratoare14:racket:functii-de-prim-rang-si-functionale">Racket: Funcții de prim rang și funcționale</a></div>
+</li>
+<li class="level0"><div class="li"> <a href="http://elf.cs.pub.ro/pp/laboratoare14/racket/legarea-variabilelor-inchideri-functionale" class="wikilink1" title="laboratoare14:racket:legarea-variabilelor-inchideri-functionale">Racket: Legarea variabilelor. Închideri funcționale</a></div>
+</li>
+</ol>
+                                            </div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="pageId"><span>teme13:scheme-interogare</span></div>
+
+                <div class="page group" style="min-height: 355px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Cuprins</h3>
+<div style="">
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#schemelimbaj-de-interogare">Scheme: Limbaj de interogare</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#descriere">Descriere</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#format-arhiva">Format arhiva</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#bonus-20-sintaxa-extinsa-pentru-clauze">Bonus (20%) - Sintaxa extinsa pentru clauze</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#precizari">Precizari</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#testare">Testare</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="schemelimbaj-de-interogare">Scheme: Limbaj de interogare</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:maa.danila@gmail.com" class="mail" title="maa.danila@gmail.com">Marius-Andrei Danila</a></div>
+</li>
+<li class="level0"><div class="li"> Deadline: 07.04.2013</div>
+</li>
+<li class="level0"><div class="li"> Data publicarii: 18.03.2013</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificari: 30.03.2013</div>
+</li>
+<li class="level0"><div class="li"> Versiune tester: 29.03.2013</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="descriere">Descriere</h2>
+<div class="level2">
+
+<p>
+Scopul temei este implementarea unui limbaj de interogare pentru o baza de date alcatuita din fapte nestructurate.
+</p>
+
+<p>
+Sa presupunem ca dorim sa implementam un sistem de baze de date care sa contina fapte obtinute din diverse retele sociale si alte baze de informatii existente pe Web. Pentru ca numarul de surse este mare, datele au o structura neomogena. Pentru a rezolva aceasta problema alegem sa stocam faptele folosind o reprezentare foarte flexibila: fiecare fapt este o lista (posibil imbricata) de termeni. Urmatorul exemplu este un fapt valid:
+</p>
+<pre class="code scheme"><span class="br0">(</span>tennis is<span class="sy0">-</span>a sport <span class="br0">(</span>players <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+O baza de date reprezinta o lista de astfel de fapte. Asa cum am mentionat, baza de date nu are o structura predefinita (ca in cazul sistemelor <abbr title="Structured Query Language">SQL</abbr>, de exemplu). Fiecare fapt poate avea orice forma (atata vreme cat respecta reprezentarea de lista imbricata, mentionata mai sus), eventual diferita fata de restul faptelor.<br>Iata un exemplu valid de baza de date:
+</p>
+<pre class="code scheme"><span class="br0">(</span><span class="kw1">define</span> db
+  '<span class="br0">(</span><span class="br0">(</span>john lives<span class="sy0">-</span>in new<span class="sy0">-</span>york<span class="br0">)</span>
+    <span class="br0">(</span>mary attends <span class="br0">(</span>event concert<span class="br0">)</span> <span class="br0">(</span>artist depeche<span class="sy0">-</span>mode<span class="br0">)</span> <span class="br0">(</span>date <span class="nu0">25</span> june <span class="nu0">2003</span><span class="br0">)</span> <span class="br0">(</span>location new<span class="sy0">-</span>york<span class="br0">)</span><span class="br0">)</span>
+    <span class="br0">(</span>mike plays tennis<span class="br0">)</span>
+    <span class="br0">(</span>john friend<span class="sy0">-</span>with mary<span class="br0">)</span>
+    <span class="br0">(</span>tennis is<span class="sy0">-</span>a sport<span class="br0">)</span>
+    <span class="br0">(</span>air<span class="sy0">-</span>hockey is<span class="sy0">-</span>a sport<span class="br0">)</span>
+    <span class="br0">(</span>air<span class="sy0">-</span>hockey player<span class="sy0">-</span>no <span class="nu0">2</span><span class="br0">)</span>
+    <span class="br0">(</span>john plays air<span class="sy0">-</span>hockey<span class="br0">)</span>
+    <span class="br0">(</span>mike lives<span class="sy0">-</span>in chicago<span class="br0">)</span>
+    <span class="br0">(</span>chicago is<span class="sy0">-</span>in USA<span class="br0">)</span>
+    <span class="br0">(</span>new<span class="sy0">-</span>york is<span class="sy0">-</span>in USA<span class="br0">)</span>
+    <span class="br0">(</span>mary lives<span class="sy0">-</span>in london<span class="br0">)</span>
+    <span class="br0">(</span>london is<span class="sy0">-</span>in UK<span class="br0">)</span>
+    <span class="br0">(</span>tennis player<span class="sy0">-</span>no <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+Orice baza de date trebuie sa puna la dispozitie, pe langa modalitatea de stocare a datelor, si un limbaj de interogare, cu ajutorul caruia sa extragem informatii. Un limbaj de interogare este definit de tipul interogarilor pe care le suporta.
+</p>
+
+<p>
+Ne propunem sa implementam un limbaj de interogare care sa permita query-uri de urmatorul tip:
+</p>
+<pre class="code scheme"><span class="br0">(</span><span class="br0">(</span>SEARCH clause1
+         clause2
+         ...
+         clauseN<span class="br0">)</span>
+ <span class="br0">(</span>SELECT <span class="br0">(</span>variable1
+          variable2
+          ...
+          variableM<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+O clauza este fie un sablon al unui fapt (un pattern), fie un predicat.
+</p>
+
+<p>
+Un pattern are aceeasi structura de lista imbricata, ca a unui fapt, cu deosebirea ca poate contine si simboluri de forma <code>?variable</code>, reprezentand variabile. Un predicat este un pseudo-fapt care incepe cu simbolul special <code>if</code>, si care continua cu o expresie care trebuie sa fie adevarata.
+</p>
+
+<p>
+Un query este compus din sectiunea <code>SEARCH</code>  care contine o lista de clauze care vor corespunde unor fapte din baza de date si sectiunea <code>SELECT</code> care declara care sunt variabilele care ne intereseaza. Iata un exemplu valid de query:
+</p>
+<pre class="code scheme"><span class="br0">(</span><span class="kw1">define</span> query
+  '<span class="br0">(</span><span class="br0">(</span>SEARCH <span class="br0">(</span>?x lives<span class="sy0">-</span>in ?city<span class="br0">)</span> <span class="co1">;1</span>
+            <span class="br0">(</span>?city is<span class="sy0">-</span>in USA<span class="br0">)</span> <span class="co1">;2</span>
+            <span class="br0">(</span>?x plays ?game<span class="br0">)</span> <span class="co1">;3</span>
+            <span class="br0">(</span>?game player<span class="sy0">-</span>no ?no<span class="br0">)</span> <span class="co1">;4</span>
+            <span class="br0">(</span><span class="kw1">if</span> <span class="br0">(</span><span class="sy0">&gt;=</span> ?no <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="co1">;5</span>
+    <span class="br0">(</span>SELECT <span class="br0">(</span>?x ?game<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span> <span class="co1">;6</span></pre>
+
+<p>
+Query-ul de mai sus va gasit toate persoanele care locuiesc intr-un oras (1) din USA (2) care practica un joc (3) care se joaca care se joaca in N jucatori (4) cu N cel putin 2 (5) si va intoarce toate perechile persoana - joc (6) care respecta aceste constrangeri.
+</p>
+
+<p>
+Scopul temei este de a defini functia <code>ask</code>, care primeste o baza de fapte si un query si va intoarce toate combinatiile de variabile cerute in query care fac clauzele din query sa fie adevarate in contextul bazei de date.
+</p>
+<pre class="code scheme"><span class="br0">(</span><span class="kw1">define</span> ask <span class="br0">(</span><span class="kw1">lambda</span> <span class="br0">(</span>db query<span class="br0">)</span> …<span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+Rezultatul este intors sub forma unei liste de substitutii. O substitutie reprezinta o lista de perechi (nume_variabila valoare). De exemplu, pentru baza de date prezentata mai sus si query-ul de dinainte, <code>ask</code> va intoarce:
+</p>
+<pre class="code scheme"><span class="br0">(</span>ask db query<span class="br0">)</span> <span class="sy0">=&gt;</span>
+<span class="br0">(</span><span class="br0">(</span><span class="br0">(</span>?x john<span class="br0">)</span> <span class="br0">(</span>?game air<span class="sy0">-</span>hockey<span class="br0">)</span><span class="br0">)</span>
+ <span class="br0">(</span><span class="br0">(</span>?x mike<span class="br0">)</span> <span class="br0">(</span>?game tennis<span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+Rezolvarea unui query presupune potrivirea fiecarui pattern cu un fapt din baza de date si verificarea adevarului pentru fiecare predicat.
+</p>
+
+<p>
+Conditii de potrivire a unui pattern cu un fapt:
+</p>
+<ul>
+<li class="level1"><div class="li"> au aceeasi structura</div>
+<ul>
+<li class="level1"><div class="li"> <code>(?x lives-in new-york)</code> se potriveste cu <code>(john lives-in new-york)</code></div>
+</li>
+<li class="level1"><div class="li"> <code>(?x attends (event concert))</code> nu se potriveste cu <code>(john attends concert)</code></div>
+</li>
+</ul>
+</li>
+<li class="level0"><div class="li"> termenii de pe aceleasi pozitii se potrivesc. O variabila se potriveste cu orice (atata vreme cat nu a fost legata anterior la o alta valoare)</div>
+<ul>
+<li class="level1"><div class="li"> <code>(?x attends (event ?y))</code> se potriveste cu <code>(mary attends (event concert))</code> si produce legarea lui <code>?x</code> la <code>mary</code> si a lui <code>?y</code> la <code>concert</code></div>
+</li>
+<li class="level1"><div class="li"> <code>(?x attends ?z)</code> se potriveste cu <code>(john attends (event concert))</code>: <code>?x</code> se leaga la <code>john</code> si <code>?z</code> se leaga la structura <code>(event concert)</code></div>
+</li>
+<li class="level1"><div class="li"> <code>(?x attends (event meeting))</code> nu se potriveste cu <code>(john attends (event concert))</code></div>
+</li>
+</ul>
+</li>
+<li class="level0"><div class="li"> potrivirea unui pattern cu un fapt produce legarea unor variabile. Acele variabile pot aparea si in faptele care urmeaza, precum si in faptul curent, eventual de mai multe ori. Un pattern care contine variabile deja legate se potriveste cu un fapt daca variabilele legate au pe pozitiile corespunzatoare din fapt o valoare identica cu valoarea legata in mod curent la variabila — o variabila se poate lega o singura data, la o singura valoare.</div>
+<ul>
+<li class="level1"><div class="li"> secventa de pattern-uri <code>((?x attends (event ?y)) (?x lives-in new-york))</code> se potriveste cu secventa de fapte <code>((john attends (event concert)) (john lives-in new-york))</code>. <code>?x</code> se va lega la simbolul <code>john</code> in prima instanta, iar pentru al doilea pattern, <code>?x</code> are pe pozitia omoloaga din fapt tot simbolul <code>john</code>.</div>
+</li>
+<li class="level1"><div class="li"> <code>((?x attends (event concert)) (?x lives-in new-york))</code> nu se potriveste cu secventa de fapte <code>((john attends (event concert)) (mike lives-in new-york))</code>. In prima instanta <code>?x</code> se leaga la <code>john</code>, dar apoi <code>?x</code> trebuie sa faca match cu <code>mike</code>, lucru care nu este posibil.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Un predicat este indeplinit daca
+</p>
+<ul>
+<li class="level1"><div class="li"> in urma inlocuirii variabilelor din predicat se obtine o expresie care nu se evalueaza la <code>#f</code>. </div>
+</li>
+<li class="level0"><div class="li"> daca predicatul contine o variabila care nu a fost inca legata, veti arunca eroarea <code>Unbound variable &lt;nume variabila&gt;</code></div>
+</li>
+<li class="level0"><div class="li"> expresia unui predicat poate fi orice expresie valida Scheme</div>
+</li>
+<li class="level0"><div class="li"> pentru evaluarea expresiei care se obtine dupa inlocuirea variabilelor puteti folosi functia <code><a href="http://docs.racket-lang.org/guide/eval.html" class="urlextern" title="http://docs.racket-lang.org/guide/eval.html" rel="nofollow">eval</a></code></div>
+</li>
+</ul>
+
+<p>
+Semantica lui <code>ask</code>:
+</p>
+<ul>
+<li class="level1"><div class="li"> pentru un query, trebuie sa intoarca toate legarile valide de variabile.</div>
+</li>
+<li class="level0"><div class="li"> o legare este valida daca atunci cand inlocuim fiecare variabila cu valoarea corespunzatoare, obtinem din pattern-uri o lista de fapte care exista in baza de date si din predicate niste expresii booleene care sunt adevarate</div>
+</li>
+<li class="level0"><div class="li"> din legarea obtinuta, trebuie pastrate doar variabilele care sunt specificate in partea de <code>SELECT</code></div>
+</li>
+<li class="level0"><div class="li"> daca in partea de <code>SELECT</code> exista cel putin o variabila care nu apare in clauzele din partea de <code>SEARCH</code>, veti arunca o eroare cu mesajul <code>Unbound variable &lt;nume_variabila&gt;</code></div>
+</li>
+</ul>
+
+<p>
+Pentru apelul lui <code>ask</code> dat ca exemplu mai sus, legarile valide sunt:
+</p>
+<pre class="code scheme"><span class="br0">(</span><span class="br0">(</span><span class="br0">(</span>?x john<span class="br0">)</span> <span class="br0">(</span>?city new<span class="sy0">-</span>york<span class="br0">)</span> <span class="br0">(</span>?game air<span class="sy0">-</span>hockey<span class="br0">)</span> <span class="br0">(</span>?no <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span>
+ <span class="br0">(</span><span class="br0">(</span>?x mike<span class="br0">)</span> <span class="br0">(</span>?city chicago<span class="br0">)</span> <span class="br0">(</span>?game tennis<span class="br0">)</span> <span class="br0">(</span>?no <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+<code>((?x john) (?city new-york) (?game air-hockey) (?no 2))</code> este o legare valida deoarece daca inlocuim in clauzele din partea de <code>SEARCH</code> din query-ul exemplu variabilele cu valorile asociate obtinem urmatoarea lista de fapte care sunt incluse in baza noastra de date:
+</p>
+<pre class="code scheme"><span class="br0">(</span><span class="br0">(</span>john lives<span class="sy0">-</span>in new<span class="sy0">-</span>york<span class="br0">)</span>
+ <span class="br0">(</span>new<span class="sy0">-</span>york is<span class="sy0">-</span>in USA<span class="br0">)</span>
+ <span class="br0">(</span>john plays air<span class="sy0">-</span>hockey<span class="br0">)</span>
+ <span class="br0">(</span>air<span class="sy0">-</span>hockey player<span class="sy0">-</span>no <span class="nu0">2</span><span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+si expresia <code>(&gt;= 2 2)</code> este adevarata
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="format-arhiva">Format arhiva</h2>
+<div class="level2">
+
+<p>
+Rezolvarea temei se va face intr-un fisier <code>ask.rkt</code> care va contine definirea functiei <code>ask</code> impreuna cu toate functiile ajutatoare necesare acesteia.
+</p>
+
+<p>
+Aici puteti gasi arhiva de plecare pentru aceasta tema care include un schelet pentru fisierul <code>ask.rkt</code>.
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/pp/_media/teme13/tema1-schelet.zip" class="media mediafile mf_zip" title="teme13:tema1-schelet.zip">Arhiva de pornire</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="bonus-20-sintaxa-extinsa-pentru-clauze">Bonus (20%) - Sintaxa extinsa pentru clauze</h2>
+<div class="level2">
+
+<p>
+Dorim sa cream un limbaj de interogare mai expresiv. Pentru a obtine acest lucru, vom relaxa sintaxa pentru pattern-uri. Regulile descrise mai sus sunt in continuare valide. In plus, putem avea urmatoarea forma pentru un pattern:
+</p>
+<pre class="code">(term_1 term_2 … term_k : term_k+1 … termN)</pre>
+
+<p>
+Elementul de noutate este operatorul <code>:</code>.
+</p>
+<ul>
+<li class="level1"><div class="li"> poate aparea o singura data intr-o lista</div>
+</li>
+<li class="level0"><div class="li"> pentru termenii de la stanga lui procesul de match se face in mod normal</div>
+</li>
+<li class="level0"><div class="li"> pentru termenii din dreapta, avem potrivire cu un fapt daca pentru fiecare termen drept exista in fapt un termen pe o pozitie mai mare sau egala cu a termenului din pattern si acest termen din fapt se potriveste cu termenul din pattern</div>
+</li>
+<li class="level0"><div class="li"> pot exista termeni in fapt care sa nu aiba termeni omologi in pattern, atata vreme cat pozitiilor acelor termeni in fapt sunt mai mari sau egale ca pozitia lui <code>:</code></div>
+</li>
+<li class="level0"><div class="li"> daca exista mai multe modalitati prin care putem potrivi termenii drepti din template cu termenii drepti din fapt, atunci toate posibilitatile vor fi luate in calcul</div>
+</li>
+</ul>
+
+<p>
+Cu alte cuvinte toti termenii din stanga lui <code>:</code> trebuie sa se potriveasca exact cu termenii corespunzatori din fapt, dar termenii din dreapta lui <code>:</code> se pot potrivi „pe sarite“ cu termenii drepti din fapt. Numarul de termeni din pattern trebuie sa fie mai mic sau egal cu numarul de termeni din fapt.
+</p>
+
+<p>
+De exemplu, pattern-ul
+</p>
+<pre class="code scheme"><span class="br0">(</span>?x attends : <span class="br0">(</span>date : <span class="nu0">2003</span><span class="br0">)</span> <span class="br0">(</span>location ?loc<span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+se potriveste cu
+</p>
+<pre class="code scheme"><span class="br0">(</span>mary attends <span class="br0">(</span>event concert<span class="br0">)</span> <span class="br0">(</span>artist depeche<span class="sy0">-</span>mode<span class="br0">)</span> <span class="br0">(</span>date <span class="nu0">25</span> june <span class="nu0">2003</span><span class="br0">)</span> <span class="br0">(</span>location new<span class="sy0">-</span>york<span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+Partea stanga din pattern <code>(?x attends)</code> trebuie sa se potriveasca exact cu partea stanga corespunzatoare din fapt: <code>(mary attends)</code>. Aceste parti se potrivesc si duc la legarea lui <code>?x</code> la simbolul <code>mary</code>. Termenii din dreapta, <code>(location ?loc) (date : 2003)</code> isi cauta potriviri, respectand ordinea, dintre termenii drepti din fapt (adica <code>(event concert) (artist depeche-mode) (date 25 june 2003) (location new-york)</code>).<br><code>(location ?loc)</code> se potriveste cu <code>(location new-york)</code> iar <code>(date : 2003)</code> se potriveste cu <code>(date 25 june 2003)</code>. <code>?loc</code> se va lega deci la <code>'new-york</code> si <code>((?x mary) (?loc new-york))</code> este singura substitutie posibila.
+</p>
+
+<p>
+Un alt exemplu:
+</p>
+<pre class="code">(?x attends : (date : ?y ?z) (location ?loc))</pre>
+
+<p>
+se potriveste cu 
+</p>
+<pre class="code">(mary attends (event concert) (artist depeche-mode) (date 25 june 2003) (location new-york))</pre>
+
+<p>
+si duce la 3 substitutii posibile:
+</p>
+<pre class="code scheme"><span class="br0">(</span><span class="br0">(</span>?x mary<span class="br0">)</span> <span class="br0">(</span>?y <span class="nu0">25</span><span class="br0">)</span> <span class="br0">(</span>?z june<span class="br0">)</span> <span class="br0">(</span>?loc new<span class="sy0">-</span>york<span class="br0">)</span><span class="br0">)</span>
+<span class="br0">(</span><span class="br0">(</span>?x mary<span class="br0">)</span> <span class="br0">(</span>?y <span class="nu0">25</span><span class="br0">)</span> <span class="br0">(</span>?z <span class="nu0">2003</span><span class="br0">)</span> <span class="br0">(</span>?loc new<span class="sy0">-</span>york<span class="br0">)</span><span class="br0">)</span>
+<span class="br0">(</span><span class="br0">(</span>?x mary<span class="br0">)</span> <span class="br0">(</span>?y june<span class="br0">)</span> <span class="br0">(</span>?z <span class="nu0">2003</span><span class="br0">)</span> <span class="br0">(</span>?loc new<span class="sy0">-</span>york<span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+Diferenta fata de exemplu anterior este la partea cu date, unde 2 variabile, <code>?y</code> si <code>?z</code> se pot lega la 3 termeni <code>25</code>, <code>june</code> si <code>2003</code>. Avem 3 combinatii posibile si de aici 3 legari.
+</p>
+
+<p>
+Daca am fi avut 3 variabile in acea zona, era o singura substitutie posibila:
+</p>
+<pre class="code scheme"><span class="br0">(</span>?x attends : <span class="br0">(</span>date : ?y ?w ?z<span class="br0">)</span> <span class="br0">(</span>location ?loc<span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+cu<br>
+</p>
+<pre class="code scheme"><span class="br0">(</span>mary attends <span class="br0">(</span>event concert<span class="br0">)</span> <span class="br0">(</span>artist depeche<span class="sy0">-</span>mode<span class="br0">)</span> <span class="br0">(</span>date <span class="nu0">25</span> june <span class="nu0">2003</span><span class="br0">)</span> <span class="br0">(</span>location new<span class="sy0">-</span>york<span class="br0">)</span><span class="br0">)</span></pre>
+
+<p>
+produce
+</p>
+<pre class="code">((?x mary) (?y 25) (?w june) (?z 2003) (?loc new-york))</pre>
+
+</div>
+
+<h2 class="sectionedit5" id="precizari">Precizari</h2>
+<div class="level2">
+
+<p>
+In rezolvarea temei, trebuie sa tineti cont de urmatoarele reguli
+</p>
+<ul>
+<li class="level1"><div class="li"> nu aveti voie sa utilizati efecte laterale (de ex., nu aveti voie sa folositi functiile din familia <code>set!</code>)</div>
+</li>
+<li class="level0"><div class="li"> utilizati functionalele invatate la curs si laborator (<code>map</code>, <code>filter</code>, <code>foldl</code>, etc.). Orice reimplementare proprie a acestor pattern-uri va fi depunctata</div>
+</li>
+<li class="level0"><div class="li"> in cazul in care rezolvarea include un modul Scheme altul decat cel importat in mod predefinit sau o librarie externa veti anunta pe forum pentru a se stabili daca includerea e posibila sau nu. In caz contrar, rezolvarea poate fi anulata</div>
+</li>
+</ul>
+
+<p>
+<strong>Forumul temei</strong> este disponibil pe cursul comun de PP de pe curs.cs.pub.ro (trecut pe <a href="http://cs.curs.pub.ro/2012/" class="urlextern" title="http://cs.curs.pub.ro/2012/" rel="nofollow">pagina principală de la cs.curs.pub.ro</a> ca fiind cursul de Paradigme de Programare de la seria CA) - inrolati-va la acest curs pentru a putea accesa forumul (<a href="http://cs.curs.pub.ro/2012/course/view.php?id=77" class="urlextern" title="http://cs.curs.pub.ro/2012/course/view.php?id=77" rel="nofollow">link direct curs</a>  <a href="http://cs.curs.pub.ro/2012/mod/forum/view.php?id=4686" class="urlextern" title="http://cs.curs.pub.ro/2012/mod/forum/view.php?id=4686" rel="nofollow">link direct forum</a>).
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="testare">Testare</h2>
+<div class="level2">
+
+<p>
+Testarea temei se va face folosind <a href="https://elf.cs.pub.ro/vmchecker/ui/" class="urlextern" title="https://elf.cs.pub.ro/vmchecker/ui/" rel="nofollow">vmchecker</a>.<br>Pentru a va testa tema folositi tester-ul din urmatoarea arhiva:
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/pp/_media/teme13/tester-tema1.zip" class="media mediafile mf_zip" title="teme13:tester-tema1.zip">Arhiva Tester</a>
+</p>
+
+<p>
+Acelasi tester este folosit si pentru verificarea online - toate testele sunt publice.
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo">teme13/scheme-interogare.txt · Ultima modificare: 2013/04/01 11:56 de către Andrei Olaru</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Unelte Pagină</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=edit&rev=0" class="action source" accesskey="v" rel="nofollow" title="Arată sursa paginii [V]"><span>Arată sursa paginii</span></a></li><li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Versiuni vechi [O]"><span>Versiuni vechi</span></a></li><li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare?do=backlink" class="action backlink" rel="nofollow" title="Legătură anterioară"><span>Legătură anterioară</span></a></li><li><a href="http://elf.cs.pub.ro/pp/teme13/scheme-interogare#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="La început [T]"><span>La început</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    
+    <div class="buttons">
+                <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./enunt_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./enunt_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./enunt_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./enunt_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./enunt_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./enunt_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>
